@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahut-electricity"
+version = "1.2.0"
+description = "Unofficial AHUT dormitory room / air-conditioning electricity balance query library and CLI"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sull1se" }]
+requires-python = ">=3.8"
+dependencies = ["requests>=2.28.0"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: Chinese (Simplified)",
+]
+
+[project.scripts]
+ahut-electricity = "ahut_electricity.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ahut_electricity*"]
